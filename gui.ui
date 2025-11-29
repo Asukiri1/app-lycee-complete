@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1296</width>
+    <height>862</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>LOGLOVER</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../../../Icone/icone loglover.png</normaloff>../../../Icone/icone loglover.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="1" column="1" colspan="2">
+     <widget class="importLogButton" name="importLogButton_2">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>200</width>
+        <height>400</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="acceptDrops">
+       <bool>true</bool>
+      </property>
+      <property name="statusTip">
+       <string>Importer fichier .log</string>
+      </property>
+      <property name="text">
+       <string>Drag and drop ou clique ici pour importer les fichiers .log</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>20</width>
+        <height>20</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1" colspan="2">
+     <widget class="QLineEdit" name="lineEdit">
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>Recherche...</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="2">
+     <widget class="QTableView" name="tableView"/>
+    </item>
+    <item row="3" column="1" colspan="2">
+     <widget class="QProgressBar" name="progressBarLogImport">
+      <property name="value">
+       <number>24</number>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0" rowspan="4">
+     <widget class="QFrame" name="optionFrame">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>160</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Shadow::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QPushButton" name="importLogButton">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="statusTip">
+          <string>Importer fichier .log</string>
+         </property>
+         <property name="text">
+          <string>Importer fichier .log</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="triDate">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="statusTip">
+          <string>Trie les log du tableau par date</string>
+         </property>
+         <property name="text">
+          <string>Trier par date</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="triPoste">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="statusTip">
+          <string>Trie les log du tableau par poste (ordre alphabétique)</string>
+         </property>
+         <property name="text">
+          <string>Trier par poste</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="statButton">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="statusTip">
+          <string>Ouvre la fenêtre des statistiques</string>
+         </property>
+         <property name="text">
+          <string>Statistique</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="searchLogButton">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="statusTip">
+          <string>Permet de chercher dans les logs pour un poste ou horaire spécifique (entrée pour valider la recherche)</string>
+         </property>
+         <property name="text">
+          <string>Chercher dans les logs</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="resetButton">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="statusTip">
+          <string>Vide le tableau des logs existants</string>
+         </property>
+         <property name="text">
+          <string>Vider le tableau</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="frame">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>350</height>
+          </size>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Shape::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Shadow::Raised</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionname">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Utilisateurs</string>
+   </property>
+   <property name="statusTip">
+    <string>Tri par ordre alphabétique de nom d'utilisateurs</string>
+   </property>
+  </action>
+  <action name="actioncomputer">
+   <property name="text">
+    <string>Poste</string>
+   </property>
+   <property name="statusTip">
+    <string>Tri par ordre alphabétique par nom du poste</string>
+   </property>
+  </action>
+  <action name="actiondate">
+   <property name="text">
+    <string>Date</string>
+   </property>
+   <property name="statusTip">
+    <string>Tri par date</string>
+   </property>
+  </action>
+  <action name="action_log_file">
+   <property name="text">
+    <string>.log file</string>
+   </property>
+  </action>
+  <action name="actionUser">
+   <property name="text">
+    <string>User</string>
+   </property>
+  </action>
+  <action name="actionSearch_in_logs">
+   <property name="text">
+    <string>Chercher dans les log</string>
+   </property>
+  </action>
+  <action name="actionStats">
+   <property name="text">
+    <string>Statistique</string>
+   </property>
+  </action>
+  <action name="actionReset">
+   <property name="text">
+    <string>Reset</string>
+   </property>
+   <property name="statusTip">
+    <string>Clean la base de données </string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>importLogButton</class>
+   <extends>QPushButton</extends>
+   <header>main_window.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
